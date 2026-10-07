@@ -82,5 +82,11 @@ namespace PrograMail_26_27
             TodoWindow fenetreTodo = new TodoWindow();
             fenetreTodo.Show();
         }
+
+        private void MenuChrono_Click(object sender, RoutedEventArgs e)
+        {
+            ChronoWindow fenetreChrono = new ChronoWindow();
+            fenetreChrono.Show();
+        }
     }
 }

@@ -25,6 +25,7 @@
         <Menu Height="25" VerticalAlignment="Top">
             <MenuItem Header="Outils">
                 <MenuItem Header="To-Do list" Click="MenuItem_Click"/>
+                <MenuItem Header="Chronomètre" Click="MenuChrono_Click"/>
             </MenuItem>
         </Menu>
 

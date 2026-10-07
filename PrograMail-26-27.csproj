@@ -55,10 +55,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ChronoModel.cs" />
+    <Compile Include="ChronoViewModel.cs" />
+    <Compile Include="ChronoWindow.xaml.cs">
+      <DependentUpon>ChronoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RelayCommand.cs" />
     <Compile Include="TodoModels.cs" />
     <Compile Include="TodoWindow.xaml.cs">
       <DependentUpon>TodoWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="ChronoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
