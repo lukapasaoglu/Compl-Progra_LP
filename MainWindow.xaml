@@ -22,6 +22,11 @@
         <TextBox x:Name="TxtSujet" HorizontalAlignment="Left" Margin="69,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
         <TextBox x:Name="TxtMessage" HorizontalAlignment="Left" Margin="69,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Height="55" Grid.Row="1"/>
         <Button x:Name="BtnEnvoyer" Content="Envoyer le mail" HorizontalAlignment="Left" Margin="69,173,0,0" VerticalAlignment="Top" Height="33" Width="137" Click="BtnEnvoyer_Click" Grid.Row="1"/>
+        <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem Header="Outils">
+                <MenuItem Header="To-Do list" Click="MenuItem_Click"/>
+            </MenuItem>
+        </Menu>
 
     </Grid>
 </Window>

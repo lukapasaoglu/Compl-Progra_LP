@@ -1,0 +1,50 @@
+﻿<Window x:Class="PrograMail_26_27.TodoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:PrograMail_26_27"
+        Title="To-Do List" Height="450" Width="420"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <local:IsDoneToTextDecorationConverter x:Key="StrikeConverter" />
+        <local:IsDoneToColorConverter x:Key="ColorConverter" />
+    </Window.Resources>
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="TxtNouvelleTache" Height="30" VerticalContentAlignment="Center" Margin="0,0,8,0" />
+            <Button Grid.Column="1" Content="Ajouter" Width="80" Height="30" Click="BtnAjouter_Click" />
+        </Grid>
+
+        <ListBox x:Name="LstTaches" Grid.Row="1" Margin="0,0,0,10">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="4">
+                        <CheckBox IsChecked="{Binding IsDone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                  VerticalAlignment="Center" Margin="0,0,8,0"/>
+
+                        <TextBox Text="{Binding Titre, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                 Foreground="{Binding IsDone, Converter={StaticResource ColorConverter}}"
+                                 TextDecorations="{Binding IsDone, Converter={StaticResource StrikeConverter}}"
+                                 BorderThickness="0" Background="Transparent" VerticalAlignment="Center" MinWidth="220" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Supprimer" Width="100" Height="32" Margin="0,0,10,0" Click="BtnSupprimer_Click" />
+            <Button Content="Enregistrer" Width="100" Height="32" Click="BtnEnregistrer_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

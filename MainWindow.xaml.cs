@@ -32,7 +32,7 @@ namespace PrograMail_26_27
             string sujet = TxtSujet.Text.Trim();
             string message = TxtMessage.Text;
 
-            string serveurSmtp = "";
+            string serveurSmtp;
 
             if (expediteur.EndsWith("@gmail.com", StringComparison.OrdinalIgnoreCase))
             {
@@ -75,6 +75,12 @@ namespace PrograMail_26_27
             {
                 MessageBox.Show("Erreur lors de l'envoi : " + erreur.Message);
             }
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            TodoWindow fenetreTodo = new TodoWindow();
+            fenetreTodo.Show();
         }
     }
 }
