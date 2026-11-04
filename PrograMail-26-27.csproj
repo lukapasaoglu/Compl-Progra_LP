@@ -60,12 +60,19 @@
     <Compile Include="ChronoWindow.xaml.cs">
       <DependentUpon>ChronoWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CommunicationWindow.xaml.cs">
+      <DependentUpon>CommunicationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RelayCommand.cs" />
     <Compile Include="TodoModels.cs" />
     <Compile Include="TodoWindow.xaml.cs">
       <DependentUpon>TodoWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="ChronoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CommunicationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
